@@ -4,7 +4,7 @@
 
     <groupId>cz.tomasdvorak</groupId>
     <artifactId>eet-client</artifactId>
-    <version>3.0.0</version>
+    <version>3.0.0-cxf_2_7_3</version>
 
     <description>
         Client / Connector for the #EET - registration of sales is an advanced system of online communication between entrepreneurs and Financial Authority.
@@ -22,7 +22,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <cxf.version>3.0.10</cxf.version>
+        <cxf.version>2.7.3</cxf.version>
         <junit.version>4.12</junit.version>
         <slf4j.version>1.7.24</slf4j.version>
         <log4j.version>2.3</log4j.version>

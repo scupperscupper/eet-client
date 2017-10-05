@@ -13,7 +13,7 @@ import cz.tomasdvorak.eet.client.exceptions.CommunicationTimeoutException;
 import cz.tomasdvorak.eet.client.exceptions.ResponseWithErrorException;
 import cz.tomasdvorak.eet.client.security.ClientKey;
 import cz.tomasdvorak.eet.client.security.ServerKey;
-import org.apache.wss4j.common.ext.WSSecurityException;
+import org.apache.ws.security.WSSecurityException;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

@@ -1,8 +1,8 @@
 package cz.tomasdvorak.eet.client.security;
 
 import cz.tomasdvorak.eet.client.exceptions.InvalidKeystoreException;
-import org.apache.wss4j.common.crypto.Merlin;
-import org.apache.wss4j.common.ext.WSSecurityException;
+import org.apache.ws.security.WSSecurityException;
+import org.apache.ws.security.components.crypto.Merlin;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -41,7 +41,7 @@ public class MerlinWithCRLDistributionPointsExtensionTest {
         subjectCertConstraints.add(Pattern.compile(SecureEETCommunication.SUBJECT_CERT_CONSTRAINTS));
         final X509Certificate[] certsPlayground = {playgroundCertificate};
         crypto.setTrustStore(playgroundKeystore);
-        crypto.verifyTrust(certsPlayground, enableRevocation,  subjectCertConstraints);
+        crypto.verifyTrust(certsPlayground, enableRevocation);
     }
 
     @Test
@@ -52,7 +52,7 @@ public class MerlinWithCRLDistributionPointsExtensionTest {
         subjectCertConstraints.add(Pattern.compile(SecureEETCommunication.SUBJECT_CERT_CONSTRAINTS));
         final X509Certificate[] certsProduction = {productionCertificate};
         crypto.setTrustStore(productionKeystore);
-        crypto.verifyTrust(certsProduction, enableRevocation,  subjectCertConstraints);
+        crypto.verifyTrust(certsProduction, enableRevocation);
     }
 
 

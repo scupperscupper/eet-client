@@ -1,6 +1,6 @@
 package cz.tomasdvorak.eet.client.security;
 
-import org.apache.wss4j.common.crypto.Merlin;
+import org.apache.ws.security.components.crypto.Merlin;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

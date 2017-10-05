@@ -16,7 +16,7 @@ import org.apache.cxf.transport.http.HTTPConduit;
 import org.apache.cxf.transports.http.configuration.HTTPClientPolicy;
 import org.apache.cxf.ws.security.wss4j.WSS4JInInterceptor;
 import org.apache.cxf.ws.security.wss4j.WSS4JOutInterceptor;
-import org.apache.wss4j.dom.handler.WSHandlerConstants;
+import org.apache.ws.security.handler.WSHandlerConstants;
 
 import cz.etrzby.xml.EET;
 import cz.etrzby.xml.EETService;
@@ -138,6 +138,7 @@ public class SecureEETCommunication {
 
         signingProperties.put(WSHandlerConstants.PW_CALLBACK_REF, this.clientKey.getClientPasswordCallback());
         signingProperties.put(WSHandlerConstants.SIGNATURE_USER, this.clientKey.getAlias()); // provides client keys to signing
+        signingProperties.put(WSHandlerConstants.USER, this.clientKey.getAlias()); // provides client keys to signing
         signingProperties.put(CRYPTO_INSTANCE_KEY, clientKey.getCrypto());
         signingProperties.put(WSHandlerConstants.SIG_PROP_REF_ID, CRYPTO_INSTANCE_KEY);
 
